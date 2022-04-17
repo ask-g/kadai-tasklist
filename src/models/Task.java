@@ -26,7 +26,7 @@ public class Task {
     private Integer id;
 
     @Column(name = "content", length = 255, nullable = false)
-    private String title;
+    private String content;
 
     @Column(name = "created_at", length = 255, nullable = false)
     private Timestamp created_at;
@@ -38,16 +38,12 @@ public class Task {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public String getContent() {
+        return content;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public Timestamp getCreated_at() {
@@ -65,5 +61,10 @@ public class Task {
     public void setUpdated_at(Timestamp updated_at) {
         this.updated_at = updated_at;
     }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
 
 }
